@@ -1,21 +1,18 @@
 #!/bin/bash -e
 
-#read -p "Hostname [$(hostname)]: " HOSTNAME  fffffffff
-#sudo raspi-config nonint do_hostname ${HOSTNAME:-$(hostname)}
+#Neuen Namen abfragen
+echo "Namen Festlegen"
+./name.sh
 
-#CURRENT_PRETTY_HOSTNAME=$(hostnamectl status --pretty)
-#read -p "Pretty hostname [${CURRENT_PRETTY_HOSTNAME:-Raspberry Pi}]: " PRETTY_HOSTNAME
-#sudo hostnamectl set-hostname --pretty "${PRETTY_HOSTNAME:-${CURRENT_PRETTY_HOSTNAME:-Raspberry Pi}}"
+echo "Rasberry pi System update"
+apt update
+apt upgrade -y
 
-echo "Updating packages"
-sudo apt update
-sudo apt upgrade -y
-
-echo "Installing components"
-sudo ./install-bluetooth.sh
-sudo ./install-spotify.sh
-sudo ./install-upnp.sh
-sudo ./install-snapcast-client.sh
-sudo ./install-pivumeter.sh
-sudo ./enable-hifiberry.sh
-sudo ./enable-read-only.sh
+echo "Neue module installieren"
+ ./install-bluetooth.sh
+ ./install-spotify.sh
+ ./install-upnp.sh
+ ./install-snapcast-client.sh
+ ./install-pivumeter.sh
+ ./enable-hifiberry.sh
+ ./enable-read-only.sh
