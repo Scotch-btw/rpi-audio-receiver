@@ -9,10 +9,10 @@ apt update
 apt upgrade -y
 
 echo "Neue module installieren"
- ./install-bluetooth.sh
- ./install-spotify.sh
- ./install-upnp.sh
- ./install-snapcast-client.sh
- ./install-pivumeter.sh
- ./enable-hifiberry.sh
- ./enable-read-only.sh
+./install-bluetooth.sh
+#./install-spotify.sh
+./install-upnp.sh
+#./install-snapcast-client.sh
+./install-pivumeter.sh
+./enable-hifiberry.sh
+#./enable-read-only.sh
