@@ -1,6 +1,6 @@
 # Raspberry Pi Bluetooth-box
 
-Eine einfacher bluetooth player
+Eine einfacher bluetooth player eine (light version von [nicokaiser/rpi-audio-receiver](https://github.com/nicokaiser/rpi-audio-receiver)
 
 ## Features
 
@@ -31,15 +31,6 @@ Lets you choose the hostname and the visible device name ("pretty hostname") whi
 
 Sets up Bluetooth, adds a simple agent that accepts every connection, and enables audio playback through [BlueALSA](https://github.com/Arkq/bluez-alsa). A udev script is installed that disables discoverability while connected.
 
-### AirPlay
-
-Installs [Shairport Sync](https://github.com/mikebrady/shairport-sync) AirPlay Audio Receiver.
-
-This script comes with a backported version of shairport-sync from Raspberry Pi OS Bullseye (see [SimpleBackportCreation](https://wiki.debian.org/SimpleBackportCreation) for details) and can be replaced with the original (but older) one in Raspberry Pi OS Buster or a sef-compiled one (not part of this project).
-
-### Spotify Connect
-
-Installs [Raspotify](https://github.com/dtcooper/raspotify), an open source Spotify client for Raspberry Pi).
 
 ### UPnP
 
