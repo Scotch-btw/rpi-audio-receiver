@@ -14,18 +14,18 @@ Eine einfacher bluetooth player (eine light version von [nicokaiser/rpi-audio-re
 - [Lautsprecher](https://www.amazon.de/Visaton-VS-FR7-Lautsprecher-Universal-130-20-000%C2%B0Hz/dp/B004GA0LFY/ref=sr_1_21?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=lautsprecher+raspberry+pi&qid=1615143122&sr=8-21) [(per aux)](https://www.amazon.de/1-5m-3-5mm-mono-Stecker-auf/dp/B000L0Z9Y6/ref=sr_1_3?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=9GLDSG0XFVNV&dchild=1&keywords=mono+aux+kabel&qid=1615143192&sprefix=mono+aux%2Caps%2C189&sr=8-3)
 
 ## Installation
-1. ``` sudo git clone https://github.com/Scotch-btw/rpi-audio-receiver.git ```
+1. ``` sudo git clone https://github.com/FinnPL/rpi-audio-receiver.git ```
 2. ```  sudo ./install.sh  ```
 
 ##### Für einen Benutzerdefinierte Installation
 
-1. ``` sudo git clone https://github.com/Scotch-btw/rpi-audio-receiver.git ```
+1. ``` sudo git clone https://github.com/FinnPL/rpi-audio-receiver.git ```
 2. ```  sudo ./install.sh --Benutzerdefiniert  ```
 
 ### Bluetooth
 
 Bluetooth wird eingerichet und jede Kopplungsanfrage automatisch genemigt, und es wird Bluetooth audio playback aktiviert ( mit der hife von  [BlueALSA](https://github.com/Arkq/bluez-alsa)). 
-Ein script wird installiert was das den pi wärend er mit einem Gerät  verbunden ist für andere Bluetoothgeräte unsichtbar macht.
+Ein script wird installiert welches den pi wärend er mit einem Gerät  verbunden ist für andere Bluetoothgeräte unsichtbar macht.
 
 ##### Bluetooth-Anzeige  Name ändern
 Um den Anzeigename zu änder einfach ```  sudo ./name.sh  ``` ausführen und einen neuen Namen eingeben.
@@ -41,36 +41,12 @@ Installiert [snapclient](https://github.com/badaix/snapcast), the client compone
 
 ## Einschränkungen
 
-- Only one Bluetooth device can be connected at a time, otherwise interruptions may occur.
-- The device is always open, new clients can connect at any time without authentication.
-- To permanently save paired devices when using read-only mode, the Raspberry has to be switched to read-write mode (`mount -o remount,rw /`) until all devices have been paired once.
-- You might want to use a Bluetooth USB dongle or have the script disable Wi-Fi while connected (see `bluetooth-udev`), as the BCM43438 (Raspberry Pi 3, Zero W) has severe problems with both switched on, see [raspberrypi/linux/#1402](https://github.com/raspberrypi/linux/issues/1402).
-- The Pi Zero may not be powerful enough to play 192 kHz audio, you may want to change the values in `/etc/asound.conf` accordingly.
+- Es kann nur ein bluetoothgerät gleichzeitig verbunden sein.
+- Jeder kann sich mit dem Bluetooth player verbinden.
 
-## Wiki
-
-There are some further examples, tweaks and how-tos in the [GitHub Wiki](https://github.com/nicokaiser/rpi-audio-receiver/wiki).
-
-## Disclaimer
-
-These scripts are tested and work on a current (as of September 2020) Raspberry Pi OS setup on Raspberry Pi. Depending on your setup (board, configuration, sound module, Bluetooth adapter) and your preferences, you might need to adjust the scripts. They are held as simple as possible and can be used as a starting point for additional adjustments.
-
-## Upgrading
-
-This project does not really support upgrading to newer versions of this script. It is meant to be adjusted to your needs and run on a clean Raspberry Pi OS install. When something goes wrong, the easiest way is to just wipe the SD card and start over. Since apart from Bluetooth pairing information all parts are stateless, this should be ok.
-
-Updating the system using `apt-get upgrade` should work however.
-
-## Contributing
-
-Package and configuration choices are quite opinionated but as close to the Debian defaults as possible. Customizations can be made by modifying the scripts, but the installer should stay as simple as possible, with as few choices as possible. That said, pull requests and suggestions are of course always welcome. However I might decide not to merge changes that add too much complexity.
-
-## References
+## Genutzte Projekte
 
 - [BlueALSA: Bluetooth Audio ALSA Backend](https://github.com/Arkq/bluez-alsa)
-- [Shairport Sync: AirPlay Audio Receiver](https://github.com/mikebrady/shairport-sync)
-- [Raspotify: Spotify Connect client for the Raspberry Pi that Just Works™](https://github.com/dtcooper/raspotify)
 - [gmrender-resurrect: Headless UPnP Renderer](http://github.com/hzeller/gmrender-resurrect)
 - [Snapcast: Synchronous audio player](https://github.com/badaix/snapcast)
 - [pivumeter: ALSA plugin for displaying VU meters on various Raspberry Pi add-ons](https://github.com/pimoroni/pivumeter)
-- [Adafruit: Read-Only Raspberry Pi](https://github.com/adafruit/Raspberry-Pi-Installer-Scripts/blob/master/read-only-fs.sh)
