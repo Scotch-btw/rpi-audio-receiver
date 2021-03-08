@@ -6,6 +6,7 @@ echo "Namen Festlegen"
 echo "Powerknopf"
 ./install-powerbutton.sh
 echo "Lautsärkeknöpfe"
+./install-Lautstärke.sh
 
 
 
