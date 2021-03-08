@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import RPi.GPIO as GPIO # Import Raspberry Pi GPIO library
 import alsaaudio
 GPIO.setwarnings(False) # Ignore warning for now
