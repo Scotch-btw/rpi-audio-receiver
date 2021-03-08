@@ -6,6 +6,8 @@ Eine einfacher bluetooth player (eine light version von [nicokaiser/rpi-audio-re
 
 1. Einfache Installation in zwei schritten.
 1. Mit jedem Bluetoothgerät compatibel.
+2. Poweroff knopf
+3. Lautsärke knöpfe
 
 ## Voraussetzungen
 
@@ -21,6 +23,14 @@ Eine einfacher bluetooth player (eine light version von [nicokaiser/rpi-audio-re
 
 1. ``` sudo git clone https://github.com/FinnPL/rpi-audio-receiver.git ```
 2. ```  sudo ./install.sh --Benutzerdefiniert  ```
+
+##Poweroff knopf
+Wenn man einen Poweroff knopf installiert hat kann man den pi jederzeit beim drücken des knopfes herunterfahren. 
+Das Program welches dies macht wird beim Starten des pi automatisch ausgeführt.
+
+##Lautsärke knöpfe
+Wenn man einen Lautsärke knöpfe installiert hat kann man jederzeit die Lautstärke des pi mit dem + Knopf um 5% erhöhen oder mit dem - knopf um -5% veringern.
+
 
 ### Bluetooth
 
