@@ -6,7 +6,7 @@ sudo apt install python3 idle3
 
 sudo apt-get install python-rpi.gpio python3-rpi.gpio
 
-sudo mv poweroffbutton.sh /etc/init.d/
-sudo chmod +x /etc/init.d/poweroffbutton.sh
-sudo update-rc.d poweroffbutton.sh defaults
-sudo /etc/init.d/poweroffbutton.sh start
+sudo mv CheckbuttonLautstärke.py /etc/init.d/
+sudo chmod +x /etc/init.d/CheckbuttonLautstärke.py
+sudo update-rc.d CheckbuttonLautstärke.py defaults
+sudo /etc/init.d/CheckbuttonLautstärke.py start
