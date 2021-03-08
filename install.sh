@@ -3,6 +3,8 @@
 #Neuen Namen abfragen
 echo "Namen Festlegen"
 ./name.sh
+echo "Powerknopf"
+./
 
 echo "Rasberry pi System update"
 apt update
